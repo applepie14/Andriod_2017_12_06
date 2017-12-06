@@ -12,6 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class MyDBHandler extends SQLiteOpenHelper {
 
+    // 정적변수
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "productDB.db";
     public static final String TABLE_PRODUCTS = "products";

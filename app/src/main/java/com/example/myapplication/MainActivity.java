@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mWebView.loadUrl("http://www.google.com");
+//        mWebView.loadUrl("http://www.google.com");
 
         // 버튼에 리스너를 연결. view에 관련된 리스너이다.
         pm.setOnClickListener(new View.OnClickListener(){

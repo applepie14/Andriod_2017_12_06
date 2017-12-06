@@ -19,10 +19,10 @@ public class Product {
         this._quantity = quantity;
     }
 
-//    public Product(String productname, int quantity) {
-//        this._productname = productname;
-//        this._quantity = quantity;
-//    }
+    public Product(String productname, int quantity) {
+        this._productname = productname;
+        this._quantity = quantity;
+    }
 
     // setter
     public void setID(int id) {
