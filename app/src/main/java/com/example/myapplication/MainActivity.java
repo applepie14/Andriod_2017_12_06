@@ -158,7 +158,8 @@ public class MainActivity extends AppCompatActivity {
         Thread worker = new Thread() {
             public void run() {
                 try {
-                    socket = new Socket("192.168.219.108", 8000);
+//                    socket = new Socket("192.168.219.108", 8000); // 집 와이파이 IP
+                    socket = new Socket("10.1.14.60", 8000); // 학교 와이파이 IP
                     socket_out = new PrintWriter(socket.getOutputStream(), true);
                     socket_in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 } catch (IOException e) {
