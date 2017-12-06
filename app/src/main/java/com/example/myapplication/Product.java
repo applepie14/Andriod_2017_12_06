@@ -19,32 +19,38 @@ public class Product {
         this._quantity = quantity;
     }
 
-    public Product(String productname, int quantity) {
-        this._productname = productname;
-        this._quantity = quantity;
-    }
+//    public Product(String productname, int quantity) {
+//        this._productname = productname;
+//        this._quantity = quantity;
+//    }
 
+    // setter
     public void setID(int id) {
         this._id = id;
-    }
-
-    public int getID() {
-        return this._id;
     }
 
     public void setProductName(String productname) {
         this._productname = productname;
     }
 
-    public String getProductName() {
-        return this._productname;
-    }
-
     public void setQuantity(int quantity) {
         this._quantity = quantity;
+    }
+
+    // getter
+    public int getID() {
+        return this._id;
+    }
+
+    public String getProductName() {
+        return this._productname;
     }
 
     public int getQuantity() {
         return this._quantity;
     }
+
+
 }
+
+
