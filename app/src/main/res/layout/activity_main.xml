@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#538EA6">
 
     <TabHost
         android:id="@+id/tabhost1"
@@ -30,6 +31,49 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/w"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dip"
+                            android:background="#fff"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/url"
+                                android:layout_width="314dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:inputType="textPersonName"
+                                android:text="Url" />
+
+                            <Button
+                                android:id="@+id/pm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Move" />
+                        </LinearLayout>
+
+                        <WebView
+                            android:id="@+id/webv"
+                            android:layout_width="match_parent"
+                            android:layout_height="400dip" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/t"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -38,11 +82,13 @@
 
                     <EditText
                         android:id="@+id/input"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text=""
+                        android:layout_marginTop="40dip"
                         android:ems="10"
-                        android:singleLine="true" >
+                        android:gravity="center_horizontal"
+                        android:singleLine="true"
+                        android:text="텍스트를 입력하세요">
 
                         <requestFocus />
                     </EditText>
@@ -51,13 +97,19 @@
                         android:id="@+id/button"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="40dip"
+                        android:background="#fff"
                         android:text="INPUT" />
 
                     <TextView
                         android:id="@+id/output"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:layout_marginTop="40dip"
+                        android:gravity="center_horizontal"
+                        android:text="TextView"
+                        android:textColor="#000"
+                        android:textSize="20dip" />
 
                 </LinearLayout>
 
@@ -171,48 +223,6 @@
                             android:onClick="removeProduct"
                             android:text="delete"
                             android:textAllCaps="false" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/w"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="50dip"
-                            android:orientation="horizontal">
-
-                            <EditText
-                                android:id="@+id/url"
-                                android:layout_width="314dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:ems="10"
-                                android:inputType="textPersonName"
-                                android:text="Url" />
-
-                            <Button
-                                android:id="@+id/pm"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Move" />
-                        </LinearLayout>
-
-                        <WebView
-                            android:id="@+id/webv"
-                            android:layout_width="match_parent"
-                            android:layout_height="400dip" />
-
                     </LinearLayout>
 
                 </LinearLayout>

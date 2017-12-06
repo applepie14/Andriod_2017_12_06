@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
 
         // 데이터베이스 부분 #################
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         quantityBox = (EditText) findViewById(R.id.productQuantity);
 
 
-        // 스레드 (클라이언트)
+        // 스레드 (클라이언트) ########################
         input = (EditText) findViewById(R.id.input);
         button = (Button) findViewById(R.id.button);
         output = (TextView) findViewById(R.id.output);
@@ -119,14 +121,18 @@ public class MainActivity extends AppCompatActivity {
 
         mWebView.loadUrl("http://www.google.com");
 
+        // 버튼에 리스너를 연결. view에 관련된 리스너이다.
         pm.setOnClickListener(new View.OnClickListener(){
 
+            // onClick이벤트. urlString 에 editText(url_String)의 값을 가져와 String값으로 저장해준다.
             @Override
             public void onClick(View view) {
                 String urlString = url_String.getText().toString();
+                // 만약에 urlString이 http로 시작하지 않을 경우에는 http://를 붙여 다시 저장해준다.
                 if(urlString.startsWith("http") != true)
                     urlString = "http://"+urlString;
 
+                // 주소를 웹뷰의 Url로 연결해준다.
                 mWebView.loadUrl(urlString);
             }
         });
